@@ -13,4 +13,12 @@ def index(request):
     }
     return render(request,'index.html',context)
 
+def notice_detail(request,pk):
+    notice = Notice.objects.filter(id=pk)
+    print(notice)
+    context = {
+        'notice':notice,
+    }
+    return render(request,'portfolio-details.html',context)
+
 

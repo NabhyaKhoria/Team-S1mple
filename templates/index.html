@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Scaffold Bootstrap Template - Index</title>
+  <title>Home - MMM</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Scaffold</a></h1>
+        <h1><a href="index.html">MMM</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -278,7 +278,7 @@
               </div>
               <div class="portfolio-links">
                 <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -765,7 +765,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Scaffold</h3>
+              <h3>MMM</h3>
               <p>
                 A108 Adam Street <br>
                 NY 535022, USA<br><br>
