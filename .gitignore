@@ -1,0 +1,11 @@
+**/__pycache__
+**/db.sqlite3
+**/DB backup
+**/log.txt
+**/staticfiles
+**/media
+templates/mail.html
+templates/logs*
+mmm/migrations*
+.idea
+S1mple/settings.py
