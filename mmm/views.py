@@ -11,7 +11,7 @@ def index(request):
         'notices':notices,
     
     }
-    return render(request,'index.html',context)
+    return render(request,'index2.html',context)
 
 def notice_detail(request,pk):
     notice = Notice.objects.filter(id=pk)
