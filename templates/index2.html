@@ -740,6 +740,7 @@
             <form action="{% url 'mmm:complaint_form' %}" method="post" class="php-email-form">
               {% csrf_token %}
               <div class="row">
+                <h3 align="center" style="margin-bottom:30px">Complaint Form</h3><br>
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>

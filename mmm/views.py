@@ -29,7 +29,7 @@ def complaint_form(request):
         email = request.POST.get('email',False)
         subject = request.POST.get('subject',False)
         message = request.POST.get('message',False)
-        wb_obj = openpyxl.load_workbook("media\Complaints\Complaint_Form.xlsx")
+        wb_obj = openpyxl.load_workbook("Complaint_Form.xlsx")
         print(wb_obj)
         sheet_obj = wb_obj.active
         j=1
