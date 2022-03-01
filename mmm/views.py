@@ -13,7 +13,7 @@ def index(request):
         'notices':notices,
 
     }
-    return render(request,'index2.html',context)
+    return render(request,'index.html',context)
 
 def notice_detail(request,pk):
     notice = Notice.objects.filter(id=pk)
@@ -54,7 +54,7 @@ def complaint_form(request):
         try:
             wb_obj.save('Complaint_Form.xlsx')
         except:
-            print("chutiya")
+            print("Failure")
         print("MESSAGE =======",cell_obj.value)
         return redirect('mmm:home')
 
