@@ -11,15 +11,17 @@ def index(request):
     print(supervisers)
     context = {
         'notices':notices,
-    
+
     }
     return render(request,'index2.html',context)
 
 def notice_detail(request,pk):
     notice = Notice.objects.filter(id=pk)
+    supervisers = Superviser.objects.all()
     print(notice)
     context = {
         'notice':notice,
+        'supervisers':supervisers,
     }
     return render(request,'portfolio-details.html',context)
 

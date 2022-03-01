@@ -3,6 +3,14 @@ from unicodedata import name
 from django.db import models
 import uuid
 
+Category = (
+    ('Technology','Technology'),
+    ('Socult','Socult'),
+    ('Sports','Sports'),
+    ('Welfare','Welfare'),
+    ('Others','Others'),
+)
+
 # Create your models here.
 class Superviser(models.Model):
     fullname = models.CharField(max_length=100)
@@ -18,6 +26,7 @@ class Superviser(models.Model):
 class Notice(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
+    category = models.CharField(max_length=30, choices=Category, default='Others')
     venue = models.CharField(max_length=60,null=True)
     description = models.TextField(null=True)
     image = models.ImageField(upload_to ='misc/')

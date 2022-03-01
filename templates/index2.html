@@ -10,9 +10,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <!-- <link href="{% static 'assets/img/favicon.png' %}" rel="icon"> -->
-  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -28,12 +25,7 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style2.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Scaffold - v4.7.0
-  * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -43,9 +35,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">MMM</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="{% url 'mmm:home' %}">MMM Hall Of Residence</a></h1>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -53,68 +43,37 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
+              <li><a class="nav-link scrollto" href="#about">About Hall</a></li>
+              <li><a class="nav-link scrollto" href="#council">Hall Council</a></li>
+              <li><a class="nav-link scrollto" href="#wardens">Wardens</a></li>
+
             </ul>
           </li>
           <li><a class="nav-link scrollto " href="#notice">Notice</a></li>
           <li><a class="nav-link scrollto" href="#Menu">Menu</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://wiki.metakgp.org/w/Madan_Mohan_Malviya_Hall_of_Residence" class="book"><i class="bi bi-book"></i></a>
+        <a href="https://www.facebook.com/mmmiitkgp" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mmmiitkgp/" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
 
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <!-- <section id="hero">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-          <div>
-            <h1>We design digital products that help grow businesses</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section> -->
-  <!-- End Hero -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Pt. Madan Mohan Malaviya</h1>
       <p>I'm <span class="typed" data-typed-items="Feeling, Life, Love, Home"></span></p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://wiki.metakgp.org/w/Madan_Mohan_Malviya_Hall_of_Residence" class="book"><i class="bx bx-book-open"></i></a>
+        <a href="https://www.facebook.com/mmmiitkgp" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/mmmiitkgp/" class="instagram"><i class="bx bxl-instagram"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -127,22 +86,15 @@
       <div class="container">
 
         <div class="row">
-          <!-- <div class="col-lg-6" data-aos="zoom-in">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
-          </div> -->
           <div class="col-lg-12 d-flex flex-column justify-contents-center" data-aos="fade-left">
             <div class="content pt-4 pt-lg-0 text-center">
-              <h3>About us</h3>
+              <h3>About Hall</h3>
               <p >
                 Pandit Madan Mohan Malaviya Hall Of Residence is the second largest Hall Of Residence in IIT Kharagpur.
                 It was founded on 26th February, 2005. It contains four blocks - SDS, RR, DSK and HK blocks. It resides students across diverse fields that include UG, PG, MBA and Law.
 
               </p>
-              <!-- <ul>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperd</li>
-              </ul> -->
+  
               <p>
                 
               </p>
@@ -153,8 +105,8 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
+    <!-- ======= Council Section ======= -->
+    <section id="council" class="features">
       <div class="container">
 
         <div class="row">
@@ -279,10 +231,10 @@
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section><!-- End Council Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- ======= Wardens Section ======= -->
+    <section id="wardens" class="services section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -293,7 +245,6 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
             <div class="icon-box icon-box-pink">
-              <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
               <h4 class="title"><a href="">Prof. Sanjib Kumar Patra</a></h4>
               <p class="description">Holds the post of Warden of MMM Hall. Department of Chemistry.</p>
             </div>
@@ -301,7 +252,6 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
-              <!-- <div class="icon"><i class="bx bx-file"></i></div> -->
               <h4 class="title"><a href="">Prof. Trilok Singh</a></h4>
               <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
             </div>
@@ -309,7 +259,6 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box icon-box-green">
-              <!-- <div class="icon"><i class="bx bx-tachometer"></i></div> -->
               <h4 class="title"><a href="">Prof. Abhay Singh Gaur</a></h4>
               <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
             </div>
@@ -317,7 +266,6 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box icon-box-blue">
-              <!-- <div class="icon"><i class="bx bx-world"></i></div> -->
               <h4 class="title"><a href="">Prof. Kaushal Kumar Bhagat</a></h4>
               <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
             </div>
@@ -326,7 +274,7 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Wardens Section -->
 
     <!-- ======= Notice Board Section ======= -->
     <section id="notice" class="portfolio">
@@ -342,21 +290,25 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Sports</li>
-              <li data-filter=".filter-card">Welfare</li>
-              <li data-filter=".filter-web">Technology</li>
+              <li data-filter=".filter-Sports">Sports</li>
+              <li data-filter=".filter-Socult">Socult</li>
+              <li data-filter=".filter-Tech">Technology</li>
+              <li data-filter=".filter-Welfare">Welfare</li>
+              <li data-filter=".filter-Others">Others</li>
+
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           {% for notice in notices %}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          {% if notice.category == "Sports" %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Sports">
             <div class="portfolio-wrap">
               <img src="{{notice.image.url}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{notice.name}}</h4>
-                <p>App</p>
+                <p>Sports</p>
               </div>
               <div class="portfolio-links">
                 <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
@@ -364,23 +316,80 @@
               </div>
             </div>
           </div>
+          {% endif %}
           {% endfor %}
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+
+            {% for notice in notices %}
+            {% if notice.category == "Socult" %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Socult">
+              <div class="portfolio-wrap">
+                <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{notice.name}}</h4>
+                  <p>Socult</p>
+                </div>
+                <div class="portfolio-links">
+                  <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
               </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            {% endif %}
+            {% endfor %}
+
+              {% for notice in notices %}
+              {% if notice.category == "Technology" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Tech">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Tech</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div> -->
+              {% endif %}
+              {% endfor %}
+              {% for notice in notices %}
+              {% if notice.category == "Welfare" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Welfare">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Welfare</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+              {% for notice in notices %}
+              {% if notice.category == "Others" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Others">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Others</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            
+
         
-          
-        </div>
 
       </div>
     </section><!-- End Notice Section -->
@@ -392,8 +401,8 @@
         <div class="row" data-aos="zoom-in" style="text-align:center; margin:auto">
           <div class="col-lg-12 " style="text-align:center; margin:auto">
             <h3>MMM Motto</h3>
-            <p style="font-size:large"> tasmād uttiṣhṭha kaunteya yuddhāya kṛita-niśhchayaḥ.</p>
-          
+            <p style="font-size:larger "> तस्मादुत्तिष्ठ कौन्तेय युद्धाय कृतनिश्चय:</p>
+            <!-- tasmād uttiṣhṭha kaunteya yuddhāya kṛita-niśhchayaḥ. -->
           </div>
           <!-- <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="#">Call To Action</a>
@@ -409,7 +418,7 @@
         <div class="section-title" data-aos="fade-up">
           <h2>Mess Menu</h2>
         </div>
-        <table class="table table-bordered table-hover text-center" border="3">
+        <table class="table table-bordered text-center" border="3">
           <thead class="thead-dark">
             <tr>
               <th class="text-center">DAYS</th>
@@ -438,7 +447,7 @@
             </td>            
           </tr>
           <tr >
-            <td rowspan="2" align="center">Monday</td>
+            <td rowspan="2" align="center">MONDAY</td>
             <td rowspan="2" align="center">IDLY 4PIC + CHATNI+SAMBAR</td>
             <td rowspan="2" align="center">MILK 150ML BREAD, BUTTER/JAM CORNFLEX</td>
             <td colspan="2" align="center">B. RICE, R. RICE,SAMBAR,SALAD,ROTI,PICKLE,PALAK DAL</td>
@@ -450,7 +459,7 @@
             <td align="center">FISH CURRY 1PC 50GRM</td>
           </tr>
           <tr >
-            <td rowspan="2" align="center">Tuesday</td>
+            <td rowspan="2" align="center">TUESDAY</td>
             <td rowspan="2" align="center">METHIONION PARATHA + ALU MOTTOR SABJI</td>
             <td rowspan="2" align="center">BREAD, BUTTER/JAM, EGG 1PC OR MILK 150ML</td>
             <td colspan="2" align="center">B. RICE, R. RICE,SAMBAR,SALAD,ROTI,PICKLE,KADI PAKORA + DAL</td>
@@ -548,7 +557,7 @@
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-book"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
@@ -564,7 +573,7 @@
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-book"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
@@ -580,7 +589,7 @@
                 <h4>William Anderson</h4>
                 <span>CTO</span>
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-book"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
@@ -747,7 +756,7 @@
     <!-- End Pricing Section -->
 
     <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
+    <!-- <section id="faq" class="faq">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -813,7 +822,8 @@
         </ul>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section> -->
+    <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
@@ -915,11 +925,9 @@
                 <strong>Email:</strong> mmmhall@iitkgp.ac.in<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://wiki.metakgp.org/w/Madan_Mohan_Malviya_Hall_of_Residence" class="book"><i class="bx bx-book-open"></i></a>
+                <a href="https://www.facebook.com/mmmiitkgp" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/mmmiitkgp/" class="instagram"><i class="bx bxl-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -928,28 +936,20 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Hall</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#notice">Notice Board</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#Menu">Menu</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact and Complaint</a></li>
             </ul>
           </div>
 
-          <!-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
+        
 
           <div class="col-lg-5 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Subscribe to our monthly newsletter and know about all our hall activites.</p>
-            <form action="" method="post">
+            <form action="" method="post"> 
+              {% csrf_token %}
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
@@ -964,11 +964,7 @@
         &copy; Copyright <strong><span></span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
-        Designed by <a href="#">S1mple</a>
+    Designed by <a href="https://github.com/NabhyaKhoria">Nabhya Khoria</a>
       </div>
     </div>
   </footer><!-- End Footer -->
