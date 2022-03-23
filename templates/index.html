@@ -34,6 +34,7 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
+      <img src="{% static 'assets/img/kgplogo.png' %}" class="halllogo" style="width:5%; height:5%;">
       <div class="logo me-auto">
         <h1><a href="{% url 'mmm:home' %}">MMM Hall Of Residence</a></h1>
       </div>
@@ -305,7 +306,7 @@
           {% if notice.category == "Sports" %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-Sports">
             <div class="portfolio-wrap">
-              <img src="{{notice.image.url}}" class="img-fluid" alt="">
+              <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
               <div class="portfolio-info">
                 <h4>{{notice.name}}</h4>
                 <p>Sports</p>
@@ -323,7 +324,7 @@
             {% if notice.category == "Socult" %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-Socult">
               <div class="portfolio-wrap">
-                <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
                 <div class="portfolio-info">
                   <h4>{{notice.name}}</h4>
                   <p>Socult</p>
@@ -333,6 +334,7 @@
                   <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
+            </div>
             {% endif %}
             {% endfor %}
 
@@ -340,7 +342,7 @@
               {% if notice.category == "Technology" %}
               <div class="col-lg-4 col-md-6 portfolio-item filter-Tech">
                 <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
                   <div class="portfolio-info">
                     <h4>{{notice.name}}</h4>
                     <p>Tech</p>
@@ -353,11 +355,12 @@
               </div>
               {% endif %}
               {% endfor %}
+
               {% for notice in notices %}
               {% if notice.category == "Welfare" %}
               <div class="col-lg-4 col-md-6 portfolio-item filter-Welfare">
                 <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
                   <div class="portfolio-info">
                     <h4>{{notice.name}}</h4>
                     <p>Welfare</p>
@@ -370,11 +373,12 @@
               </div>
               {% endif %}
               {% endfor %}
+
               {% for notice in notices %}
               {% if notice.category == "Others" %}
               <div class="col-lg-4 col-md-6 portfolio-item filter-Others">
                 <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid" alt="">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
                   <div class="portfolio-info">
                     <h4>{{notice.name}}</h4>
                     <p>Others</p>
@@ -390,7 +394,7 @@
             
 
         
-
+      </div>
       </div>
     </section><!-- End Notice Section -->
 

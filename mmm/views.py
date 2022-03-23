@@ -2,6 +2,7 @@ from urllib import request
 from django.shortcuts import redirect, render
 from .models import *
 import openpyxl
+import requests
 
 
 # Create your views here.
@@ -31,6 +32,9 @@ def complaint_form(request):
         email = request.POST.get('email',False)
         subject = request.POST.get('subject',False)
         message = request.POST.get('message',False)
+        url = 'https://docs.google.com/forms/d/e/1FAIpQLSf50jP5d8fJhwvVLJptcMf1mzxAGWMPEUg8Go5KqVquKcZb9Q/formResponse'
+        obj = {"entry.777368475":name,"entry.1558772464":email,"entry.220954102":subject,"entry.229301749":message,"fvv":1,"draftResponse":'[]',"pageHistory":0,"fbzx":-2525148146002960632}
+        x = requests.post(url, data=obj)
         wb_obj = openpyxl.load_workbook("Complaint_Form.xlsx")
         print(wb_obj)
         sheet_obj = wb_obj.active
@@ -55,7 +59,7 @@ def complaint_form(request):
             wb_obj.save('Complaint_Form.xlsx')
         except:
             print("Failure")
-        print("MESSAGE =======",cell_obj.value)
+        print("MESSAGE =======",x)
         return redirect('mmm:home')
 
 
