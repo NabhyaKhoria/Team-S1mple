@@ -32,7 +32,7 @@
    <!-- ======= Header ======= -->
    <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-
+      <img src="{% static 'assets/img/kgplogo.png' %}" class="halllogo" style="width:5%; height:5%;">
       <div class="logo me-auto">
         <h1><a href="{% url 'mmm:home' %}">MMM Hall Of Residence</a></h1>
       </div>
@@ -71,7 +71,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="{% url 'mmm:home' %}">Home</a></li>
           <li>Notice Board Detail</li>
         </ol>
         <h2>Notice Board</h2>
@@ -177,12 +177,12 @@
         
 
           <div class="col-lg-5 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
+            <!-- <h4>Our Newsletter</h4>
             <p>Subscribe to our monthly newsletter and know about all our hall activites.</p>
             <form action="" method="post"> 
               {% csrf_token %}
               <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            </form> -->
 
           </div>
 
