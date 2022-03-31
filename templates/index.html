@@ -84,7 +84,10 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Pt. Madan Mohan Malaviya</h1>
-      <p>I'm <span class="typed" data-typed-items="Feeling, Life, Love, Home"></span></p>
+      <!-- <p>I'm <span class="typed" data-typed-items="Feeling, Life, Love, Home"></span></p>
+       -->
+       <p style="font-size:30px "> तस्मादुत्तिष्ठ कौन्तेय युद्धाय कृतनिश्चय:</p>
+       <p style="font-size:20px; margin-top:0px;"><i>Bhagavad Gita: Chapter 2, Verse 37</i></p>
       <div class="social-links">
         <a href="https://wiki.metakgp.org/w/Madan_Mohan_Malviya_Hall_of_Residence" class="book"><i class="bx bx-book-open"></i></a>
         <a href="https://www.facebook.com/mmmiitkgp" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -119,6 +122,172 @@
 
       </div>
     </section><!-- End About Section -->
+    
+    <!-- ======= Notice Board Section ======= -->
+    <section id="notice" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Notice Board</h2>
+          <p>
+          MMM offers a lot of sports and welfare events. Heres the list of the upcoming events.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-Sports">Sports</li>
+              <li data-filter=".filter-Socult">Socult</li>
+              <li data-filter=".filter-Tech">Technology</li>
+              <li data-filter=".filter-Welfare">Welfare</li>
+              <li data-filter=".filter-Others">Others</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          {% for notice in notices %}
+          {% if notice.category == "Sports" %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-Sports">
+            <div class="portfolio-wrap">
+              <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
+              <div class="portfolio-info">
+                <h4>{{notice.name}}</h4>
+                <p>Sports</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+            {% for notice in notices %}
+            {% if notice.category == "Socult" %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-Socult">
+              <div class="portfolio-wrap">
+                <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
+                <div class="portfolio-info">
+                  <h4>{{notice.name}}</h4>
+                  <p>Socult</p>
+                </div>
+                <div class="portfolio-links">
+                  <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                  <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+              {% for notice in notices %}
+              {% if notice.category == "Technology" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Tech">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Tech</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+
+              {% for notice in notices %}
+              {% if notice.category == "Welfare" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Welfare">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Welfare</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+
+              {% for notice in notices %}
+              {% if notice.category == "Others" %}
+              <div class="col-lg-4 col-md-6 portfolio-item filter-Others">
+                <div class="portfolio-wrap">
+                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{notice.name}}</h4>
+                    <p>Others</p>
+                  </div>
+                  <div class="portfolio-links">
+                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
+                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            
+
+        
+      </div>
+      </div>
+    </section><!-- End Notice Section -->
+
+   <!-- ======= Wardens Section ======= -->
+   <section id="wardens" class="services section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>Wardens</h2>
+        <p>MMM hall comprises of a warden and three assistant wardens.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
+          <div class="icon-box icon-box-pink">
+            <!-- <img src="{% static 'assets/img/Wardens/sanjib.jpg' %}" style="margin-right:auto; position:fixed; margin-left:auto;  "> -->
+            <h4 class="title"><a href="">Prof. Sanjib Kumar Patra</a></h4>
+            <p class="description">Department of Chemistry <br> 
+            Warden </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box icon-box-cyan">
+            <h4 class="title"><a href="">Prof. Trilok Singh</a></h4>
+            <p class="description">School of Energy Science and Engineering<br> Assistant Warden</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box icon-box-green">
+            <h4 class="title"><a href="">Prof. Abhay Singh Gaur</a></h4>
+            <p class="description">Center of Cryogenic Engineering <br> Assistant Warden</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box icon-box-blue">
+            <h4 class="title"><a href="">Prof. Kaushal Kumar Bhagat</a></h4>
+            <p class="description">Center For Education Technology <Br> Assistant Warden</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Wardens Section -->
 
     <!-- ======= Council Section ======= -->
     <section id="council" class="features">
@@ -248,170 +417,7 @@
       </div>
     </section><!-- End Council Section -->
 
-    <!-- ======= Wardens Section ======= -->
-    <section id="wardens" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Wardens</h2>
-          <p>MMM hall comprises of a warden and three assistant wardens to look after all the administration stuff involved.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
-            <div class="icon-box icon-box-pink">
-              <h4 class="title"><a href="">Prof. Sanjib Kumar Patra</a></h4>
-              <p class="description">Holds the post of Warden of MMM Hall. Department of Chemistry.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <h4 class="title"><a href="">Prof. Trilok Singh</a></h4>
-              <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <h4 class="title"><a href="">Prof. Abhay Singh Gaur</a></h4>
-              <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box icon-box-blue">
-              <h4 class="title"><a href="">Prof. Kaushal Kumar Bhagat</a></h4>
-              <p class="description">Holds the post of Associate Warden of MMM Hall. </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Wardens Section -->
-
-    <!-- ======= Notice Board Section ======= -->
-    <section id="notice" class="portfolio">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Notice Board</h2>
-          <p>
-          MMM offers a lot of sports and welfare events. Heres the list of the upcoming events.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-Sports">Sports</li>
-              <li data-filter=".filter-Socult">Socult</li>
-              <li data-filter=".filter-Tech">Technology</li>
-              <li data-filter=".filter-Welfare">Welfare</li>
-              <li data-filter=".filter-Others">Others</li>
-
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          {% for notice in notices %}
-          {% if notice.category == "Sports" %}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-Sports">
-            <div class="portfolio-wrap">
-              <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
-              <div class="portfolio-info">
-                <h4>{{notice.name}}</h4>
-                <p>Sports</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% endfor %}
-
-            {% for notice in notices %}
-            {% if notice.category == "Socult" %}
-            <div class="col-lg-4 col-md-6 portfolio-item filter-Socult">
-              <div class="portfolio-wrap">
-                <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
-                <div class="portfolio-info">
-                  <h4>{{notice.name}}</h4>
-                  <p>Socult</p>
-                </div>
-                <div class="portfolio-links">
-                  <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                  <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-
-              {% for notice in notices %}
-              {% if notice.category == "Technology" %}
-              <div class="col-lg-4 col-md-6 portfolio-item filter-Tech">
-                <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
-                  <div class="portfolio-info">
-                    <h4>{{notice.name}}</h4>
-                    <p>Tech</p>
-                  </div>
-                  <div class="portfolio-links">
-                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endfor %}
-
-              {% for notice in notices %}
-              {% if notice.category == "Welfare" %}
-              <div class="col-lg-4 col-md-6 portfolio-item filter-Welfare">
-                <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
-                  <div class="portfolio-info">
-                    <h4>{{notice.name}}</h4>
-                    <p>Welfare</p>
-                  </div>
-                  <div class="portfolio-links">
-                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endfor %}
-
-              {% for notice in notices %}
-              {% if notice.category == "Others" %}
-              <div class="col-lg-4 col-md-6 portfolio-item filter-Others">
-                <div class="portfolio-wrap">
-                  <img src="{{notice.image.url}}" class="img-fluid noticeimg" alt="">
-                  <div class="portfolio-info">
-                    <h4>{{notice.name}}</h4>
-                    <p>Others</p>
-                  </div>
-                  <div class="portfolio-links">
-                    <a href="{{notice.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{notice.name}}"><i class="bx bx-plus"></i></a>
-                    <a href="{% url 'mmm:notice_detail' notice.id %}" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endfor %}
-            
-
-        
-      </div>
-      </div>
-    </section><!-- End Notice Section -->
-
+ 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
