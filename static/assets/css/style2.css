@@ -78,6 +78,9 @@ h6 {
     width: 15% !important;
   }
 }
+.motto{
+  font-size: 20px !important;
+}
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -233,6 +236,7 @@ h6 {
 /**
   * Mobile Navigation 
   */
+
 .mobile-nav-toggle {
   color: #364146;
   font-size: 28px;
