@@ -35,30 +35,30 @@ def complaint_form(request):
         url = 'https://docs.google.com/forms/d/e/1FAIpQLSf50jP5d8fJhwvVLJptcMf1mzxAGWMPEUg8Go5KqVquKcZb9Q/formResponse'
         obj = {"entry.777368475":name,"entry.1558772464":email,"entry.220954102":subject,"entry.229301749":message,"fvv":1,"draftResponse":'[]',"pageHistory":0,"fbzx":-2525148146002960632}
         x = requests.post(url, data=obj)
-        wb_obj = openpyxl.load_workbook("Complaint_Form.xlsx")
-        print(wb_obj)
-        sheet_obj = wb_obj.active
-        j=1
-        current_row=sheet_obj.max_row+1
-        cell_obj = sheet_obj.cell(row = current_row, column = j)
-        cell_obj.value=current_row
-        j=2
-        cell_obj = sheet_obj.cell(row = current_row, column = j)
-        cell_obj.value=name
-        j=3
-        cell_obj = sheet_obj.cell(row = current_row, column = j)
-        cell_obj.value=email
-        j=4
-        cell_obj = sheet_obj.cell(row = current_row, column = j)
-        cell_obj.value=subject
-        j=5
-        cell_obj = sheet_obj.cell(row = current_row, column = j)
-        cell_obj.value=message
+        # wb_obj = openpyxl.load_workbook("Complaint_Form.xlsx")
+        # print(wb_obj)
+        # sheet_obj = wb_obj.active
+        # j=1
+        # current_row=sheet_obj.max_row+1
+        # cell_obj = sheet_obj.cell(row = current_row, column = j)
+        # cell_obj.value=current_row
+        # j=2
+        # cell_obj = sheet_obj.cell(row = current_row, column = j)
+        # cell_obj.value=name
+        # j=3
+        # cell_obj = sheet_obj.cell(row = current_row, column = j)
+        # cell_obj.value=email
+        # j=4
+        # cell_obj = sheet_obj.cell(row = current_row, column = j)
+        # cell_obj.value=subject
+        # j=5
+        # cell_obj = sheet_obj.cell(row = current_row, column = j)
+        # cell_obj.value=message
         # wb_obj.save('Complaint_Form.xlsx')
-        try:
-            wb_obj.save('Complaint_Form.xlsx')
-        except:
-            print("Failure")
+        # try:
+        #     wb_obj.save('Complaint_Form.xlsx')
+        # except:
+        #     print("Failure")
         print("MESSAGE =======",x)
         return redirect('mmm:home')
 
